@@ -42,17 +42,14 @@ router.post('/member/submit',  (req, res) => {
       console.log(error);
     } else {
       console.log("Message sent : " + response.message);
-      res.render('result', {
-        name : req.body.name,
-        email : req.body.email,
-        studentId : req.body.studentId,
-        link : req.body.link,
-        message: req.body.message
-      })
+      res.redirect('/member/finish')
     }
     transport.close();
   });
+});
 
+router.get('/member/finish', (req, res) => {
+  res.render('result');
 });
 
 module.exports = router;
