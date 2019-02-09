@@ -64,7 +64,13 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
-    
+
+
+    $("#close").click(function(){
+        window.open('','_parent','');
+        window.close();
+    });
+
+
 
 })(jQuery);

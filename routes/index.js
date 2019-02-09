@@ -12,12 +12,13 @@ const transport = nodemailer.createTransport(smtpTransport({
   }
 }));
 
-
-
+router.get('/', (req, res) => {
+  res.render('index');
+});
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/member/submit', function(req, res, next) {
+  res.render('form', { title: 'Express' });
 });
 
 router.post('/member/submit',  (req, res) => {
