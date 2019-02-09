@@ -1,0 +1,99 @@
+doctype html
+html(lang='en')
+  head
+    title Contact V4
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // ===============================================================================================
+    link(rel='icon', type='image/png', href='images/icons/favicon.ico')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='vendor/bootstrap/css/bootstrap.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='vendor/animate/animate.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='vendor/css-hamburgers/hamburgers.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='vendor/animsition/css/animsition.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='vendor/select2/select2.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='vendor/daterangepicker/daterangepicker.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='css/util.css')
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    // ===============================================================================================
+  body
+    .container-contact100
+      .wrap-contact100
+        form.contact100-form.validate-form(method='post', action='/member/submit')
+          span.contact100-form-title
+            | ISTeam
+          .wrap-input100.validate-input(data-validate='이름이 입력되지 않았습니다')
+            span.label-input100 이름
+            input.input100(type='text', name='name', placeholder='이름을 입력해주세요')
+            span.focus-input100
+          .wrap-input100.validate-input(data-validate='바른형식의 이메일이 입력되지 않았습니다.')
+            span.label-input100 이메일
+            input.input100(type='text', name='email', placeholder='이메일을 입력해 주세요')
+            span.focus-input100
+          .wrap-input100.input100-select
+            span.label-input100 학번
+            div
+              select.selection-2(name='studentId')
+                option 학번을 선택해 주세요
+                option 19
+                option 18
+                option 17
+                option 16
+                option 15
+                option 14
+                option 13
+                option 12
+                option 11
+                option 10학번 이하
+            span.focus-input100
+          .wrap-input100.validate-input
+            span.label-input100 링크
+            input.input100(type='text', name='link', placeholder='링크를 입력해주세요(블로그,Github 등등)')
+            span.focus-input100
+          .wrap-input100.validate-input(data-validate='내용이 입력되지 않았습니다')
+            span.label-input100 지원동기 및 자기소개
+            textarea.input100(name='message', placeholder='내용을 입력해 주세요')
+            span.focus-input100
+          .container-contact100-form-btn
+            .wrap-contact100-form-btn
+              .contact100-form-bgbtn
+              button.contact100-form-btn
+                span
+                  | 지원
+                  i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
+    #dropDownSelect1
+    // ===============================================================================================
+    script(src='vendor/jquery/jquery-3.2.1.min.js')
+    // ===============================================================================================
+    script(src='vendor/animsition/js/animsition.min.js')
+    // ===============================================================================================
+    script(src='vendor/bootstrap/js/popper.js')
+    script(src='vendor/bootstrap/js/bootstrap.min.js')
+    // ===============================================================================================
+    script(src='vendor/select2/select2.min.js')
+    script.
+      $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect1')
+      });
+    // ===============================================================================================
+    script(src='vendor/daterangepicker/moment.min.js')
+    script(src='vendor/daterangepicker/daterangepicker.js')
+    // ===============================================================================================
+    script(src='vendor/countdowntime/countdowntime.js')
+    // ===============================================================================================
+    script(src='javascripts/main.js')
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-23581568-13')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-23581568-13');
