@@ -5,7 +5,9 @@ const config = require('../config/config');
 const smtpTransport = require('nodemailer-smtp-transport');
 
 const transport = nodemailer.createTransport(smtpTransport({
-  service: 'Gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // use SSL
   auth: {
     user: config.email,
     pass: config.password
